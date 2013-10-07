@@ -44,9 +44,10 @@ To run this code first install OpenCL for the GPU-device on your system.
 For NVIDIA-cards this is usually already installed with the driver.
 Also make sure JRE 6 is installed.
 
+Grab the data-folder and put the executable Jar-file Realtime_Raytracing.jar in the same location.
 
 For Windows: 
-Grab the executable Jar-file Realtime_Raytracing.jar and double click on it.
+Double click and you're good to go.
 
 
 For Linux: 
