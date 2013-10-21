@@ -646,6 +646,7 @@ __global float* view)
 	for(int i = 0; i < maxTraceDepth && !done && reflectivity > 0; i++)
 	{
 		float4 c = intersect(spheres, triangles, lights, spherescount, trianglescount, lightscount, &reflectionRay, 0, 0, 0, 0, 0, &done, &object);
+		color = mix(c, color, 1 - reflectivity);
 		
 		index = object / 10;
 		type = object % 10;
@@ -665,10 +666,8 @@ __global float* view)
 			reflectivity *= t.reflec;
 		}
 		reflectionRay.dir = reflect(reflectionRay.dir, n);
-		if(!done)
-			color = mix(color, c, 1-reflectivity);
-		else
-			color = (float4)(0,0,0,0);
+		if(done)
+			color = mix(backgroundColor, color, 1 - reflectivity);
 	}
     
     write_imagef(texture, (int2)(xid, yid), color);    
