@@ -15,7 +15,7 @@ It features three modes:
 =================
 Usage:
 
-To flip thru these modes, press M.
+To flip through these modes, press M.
 
 
 To add new objects, proceed as followed:
@@ -24,7 +24,7 @@ INSERT - add Sphere
 
 HOME - add Triangle Vertex, Triangle spawn at the count of 3
 
-LEFT/RIGHT - flip thru the parameters
+LEFT/RIGHT - flip through the parameters
 
 UP/DOWN - change the currently selected parameter
 
@@ -42,7 +42,7 @@ DELETE - removes the object in the center (only in mode 1)
 
 To run this code first install OpenCL for the GPU-device on your system.
 For NVIDIA-cards this is usually already installed with the driver.
-Also make sure JRE 6 is installed.
+Also make sure your Java version is 6 or higher.
 
 Grab the data-folder and put the executable Jar-file Realtime_Raytracing.jar in the same location.
 
